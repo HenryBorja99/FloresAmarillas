@@ -1,0 +1,89 @@
+body {
+    background-color: #FFFBEB;
+    font-family: 'Dancing Script', cursive;
+    color: #4B69FD;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-content {
+    background-color: #F8E8A6;
+    border: 3px solid #FFD700;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos de texto y botones */
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #4B69FD;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FF69B4;
+    margin-bottom: 20px;
+}
+
+.siguiente-btn {
+    background-color: #4B69FD;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.siguiente-btn:hover {
+    background-color: #374EBA;
+    transform: scale(1.05);
+}
+
+/* Estilos para las secciones */
+.seccion {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    animation: fadein 1s;
+}
+
+.seccion.activa {
+    display: flex;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.imagen-container {
+    margin: 20px 0;
+    text-align: center;
+    align-items: center;
+}
+.imagen-amor {
+    max-width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    
+}
