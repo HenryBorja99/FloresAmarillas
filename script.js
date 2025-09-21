@@ -29,3 +29,12 @@ function iniciarExperiencia() {
         });
     }
 }
+
+function finalizarExperiencia() {
+    const audio = document.getElementById('audio');
+    audio.pause(); // Detiene la reproducción
+    audio.currentTime = 0; // Regresa la canción al inicio por si quiere reproducirla de nuevo
+    
+    // Opcional: Podrías mostrar un mensaje de despedida
+    alert("¡ Espero que esta sorpresa te haya llenado de alegría. ♥");
+}

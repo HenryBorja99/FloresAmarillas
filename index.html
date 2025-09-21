@@ -13,7 +13,7 @@
     <main class="main-content">
         <section id="seccion0" class="seccion activa">
             <h1 class="poema-titulo">¡Una sorpresa para ti!</h1>
-            <p class="poema-texto">Haz clic para empezar a descubrir...</p>
+            <p class="poema-texto">Un solo clic. Y mis suspiros, esos que solo tú entiendes, empezarán a sonar. Baja el volumen... o que el mundo sepa lo que siento por ti.</p>
             <div class="boton-container">
                 <button onclick="iniciarExperiencia()" class="siguiente-btn">Empezar</button>
             </div>
@@ -69,7 +69,7 @@
                 y que te quiere sin medida.
             </p>
             <div class="boton-container">
-                <button onclick="mostrarSeccion('seccion2')" class="siguiente-btn">Ver la sorpresa</button>
+                <button onclick="mostrarSeccion('seccion2')" class="siguiente-btn">Ver la canción</button>
             </div>
         </section>
 
@@ -78,7 +78,10 @@
             <div class="imagen-container">
                 <img src="pngtree-yellow-flowers-png-image_7014770.png" alt="Imagen de amor" class="imagen-amor">
             </div>
-            <p class="poema-texto">Si hablamos de canciones, Tú eres mi canción favorita. Espero que esta sorpresa te haya llenado de alegría.</p>
+            <p class="poema-texto">Si hablamos de canciones, Tú eres mi canción favorita.</p>
+            <div class="boton-container">
+                <button onclick="finalizarExperiencia()" class="siguiente-btn">Finalizar</button>
+            </div>
         </section>
 
         <audio id="audio" src="audio/perfect.mp3" loop></audio>
