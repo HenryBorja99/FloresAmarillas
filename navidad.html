@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Navidad</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="body-navidad">
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="navidad.html" class="nav-link activo">Navidad</a>
+    </nav>
+
+    <main class="main-content content-navidad">
+        <h1 class="titulo-navidad">Feliz Navidad</h1>
+        
+
+        <div class="scroll-texto">
+            <p class="texto-navidad">
+                Amor, en esta Navidad quiero que sepas que mi mejor regalo eres tú, que esta es la primera, la nuestra, y me emociona la idea de que hoy estamos aquí, unidos incluso cuando la distancia intenta decir lo contrario.<br><br>
+
+                Me encanta que seas tú quien me haga feliz, quien transforme mis días en hogar y mis pensamientos en calma; te envío un abrazo a la distancia, mi cielito, de esos que no se ven pero se sienten fuerte en el alma, recordando cómo todo comenzó y soñando con todo lo que aún nos espera.<br><br>
+
+                Mi tesoro, encontré paz, encontré amor, te encontré a ti; mi reina, mi verdad, mi futura esposa es lo que quiero, mil años a tu lado y aun así sentir que el tiempo no alcanza cuando se trata de amarte y cuidarte como mereces.<br><br>
+
+                Que Dios te siga bendiciendo cada día, que cuide tus pasos, tus sueños y tu sonrisa, que te envuelva con su luz y te regale fuerza, paz y esperanza en cada nuevo amanecer.<br><br>
+
+                Feliz y hermosa Navidad, mi amor; te adoro tanto que las palabras se quedan pequeñas, y si la vida nos unió, haré lo que sea por quedarme contigo, agradecido por este amor y por ti, hoy y siempre.
+            </p>
+        </div>
+
+        <div class="boton-container">
+            <button onclick="toggleMusicaNavidad()" class="siguiente-btn btn-navidad" id="btn-musica">
+                ▶ Reproducir
+            </button>
+        </div>
+
+        <audio id="audio-navidad" src="audio/bendita_luz.mp3" loop></audio>
+    </main>
+
+
+
+    <script>
+        function toggleMusicaNavidad() {
+            const audio = document.getElementById('audio-navidad');
+            const btn = document.getElementById('btn-musica');
+            
+            if (audio.paused) {
+                audio.play();
+                btn.textContent = "⏸ Pausar";
+            } else {
+                audio.pause();
+                btn.textContent = "▶ Reproducir";
+            }
+        }
+    </script>
+</body>
+</html>
