@@ -37,3 +37,24 @@ function finalizarExperiencia() {
     
     alert("¡ Espero que esta sorpresa te haya llenado de alegría. ♥");
 }
+
+var modal = document.getElementById("miModal");
+var btnAbrir = document.getElementById("abrir-modal");
+var spanCerrar = document.getElementsByClassName("cerrar-modal")[0];
+
+
+btnAbrir.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+spanCerrar.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
