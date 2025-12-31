@@ -22,6 +22,7 @@ body {
     margin: 0;
     padding-bottom: 70px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -78,7 +79,6 @@ body {
     position: relative;
     margin-top: 110px;
     margin-bottom: 40px;
-
 }
 
 h1 {
@@ -211,4 +211,212 @@ body.body-navidad {
     .nav-link { font-size: 1.3em; }
     .texto-navidad { font-size: 1.4em; text-align: left; padding: 0 10px; }
     .titulo-navidad { font-size: 3em; }
+}
+
+body.body-anio-nuevo {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); 
+}
+
+.content-anio-nuevo {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 4px solid #DAA520; 
+    box-shadow: 0 0 50px rgba(218, 165, 32, 0.5);
+    max-width: 1000px;
+}
+
+.titulo-anio {
+    color: #DAA520;
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.union-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    position: relative;
+    height: 300px; 
+    width: 100%;
+}
+
+.foto-marco {
+    position: relative;
+    width: 220px;
+    height: 280px;
+    background: white;
+    padding: 10px 10px 45px 10px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    transition: all 1s ease-out;
+    z-index: 1;
+}
+
+.foto-marco img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.etiqueta-pais {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
+
+.izquierda {
+    transform: rotate(-10deg);
+    animation: entrarIzquierda 2.5s forwards;
+    margin-right: 40px; 
+}
+
+.derecha {
+    transform: rotate(10deg);
+    animation: entrarDerecha 2.5s forwards;
+    margin-left: 40px;
+}
+
+@keyframes entrarIzquierda {
+    0% { 
+        transform: translateX(-150px) rotate(-15deg); 
+        opacity: 0; 
+    }
+    100% { 
+        transform: translateX(15px) rotate(-5deg);
+        opacity: 1; 
+    }
+}
+
+@keyframes entrarDerecha {
+    0% { 
+        transform: translateX(150px) rotate(15deg); 
+        opacity: 0; 
+    }
+    100% { 
+        transform: translateX(-15px) rotate(5deg); 
+        opacity: 1; 
+    }
+}
+
+.corazon-union {
+    font-size: 60px;
+    position: absolute;
+    z-index: 2;
+    animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.carta-anio p {
+    color: #333;
+    font-size: 1.6em;
+    text-shadow: none;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.carta-anio strong { color: #DAA520; }
+.carta-anio em { color: #FF69B4; }
+
+.footer-anio { background: rgba(0, 0, 0, 0.5); }
+.footer-anio p { color: #fff; }
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.8em; }
+    p { font-size: 1.4em; padding: 0 10px; }
+    
+    .foto-marco {
+        width: 135px;
+        height: 180px;
+        padding: 5px 5px 30px 5px;
+    }
+    
+    .izquierda { margin-right: 5px; }
+    .derecha { margin-left: 5px; }
+
+    @keyframes entrarIzquierda {
+        0% { transform: translateX(-50px) rotate(-10deg); opacity: 0; }
+        100% { transform: translateX(2px) rotate(-5deg); opacity: 1; }
+    }
+
+    @keyframes entrarDerecha {
+        0% { transform: translateX(50px) rotate(10deg); opacity: 0; }
+        100% { transform: translateX(-2px) rotate(5deg); opacity: 1; }
+    }
+    .corazon-union { font-size: 40px; }
+}
+
+.texto-interactivo {
+    cursor: pointer;
+    color: #FFD700;  
+    text-decoration: underline; 
+    font-weight: bold;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85); 
+}
+
+.modal-contenido {
+    margin: 5% auto; 
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #FFD700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-contenido {
+        width: 95%;
+        margin-top: 20%;
+    }
+    .cerrar-modal {
+        top: 10px;
+        right: 20px;
+        font-size: 40px;
+    }
 }
